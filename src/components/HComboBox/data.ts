@@ -1,0 +1,237 @@
+import { Node } from "./type";
+
+export const mockData: Record<string, Node[]> = {
+  categories: [
+    {
+      id: "electronics",
+      label: "Electronics",
+      hasChildren: true,
+      parentId: null,
+      expanded: false,
+    },
+    {
+      id: "fashion",
+      label: "Fashion",
+      hasChildren: true,
+      parentId: null,
+      expanded: false,
+    },
+    {
+      id: "furniture",
+      label: "Furniture",
+      hasChildren: true,
+      parentId: null,
+      expanded: false,
+    },
+    {
+      id: "fitness",
+      label: "Fitness",
+      hasChildren: true,
+      parentId: null,
+      expanded: false,
+    },
+  ],
+  electronics: [
+    {
+      id: "mobiles",
+      label: "Mobiles",
+      hasChildren: false,
+      parentId: "electronics",
+      expanded: false,
+    },
+    {
+      id: "laptops",
+      label: "Laptops",
+      hasChildren: true,
+      parentId: "electronics",
+      expanded: false,
+    },
+  ],
+  laptops: [
+    {
+      id: "gaming-laptops",
+      label: "Gaming Laptops",
+      hasChildren: false,
+      parentId: "laptops",
+      expanded: false,
+    },
+    {
+      id: "chromebooks",
+      label: "Chromebooks",
+      hasChildren: false,
+      parentId: "laptops",
+      expanded: false,
+    },
+    {
+      id: "professional-laptops",
+      label: "Professional Laptops",
+      hasChildren: false,
+      parentId: "laptops",
+      expanded: false,
+    },
+  ],
+  fashion: [
+    {
+      id: "mens",
+      label: "Mens",
+      hasChildren: true,
+      parentId: "fashion",
+      expanded: false,
+    },
+    {
+      id: "womens",
+      label: "Womens",
+      hasChildren: true,
+      parentId: "fashion",
+      expanded: false,
+    },
+  ],
+  mens: [
+    {
+      id: "shirts",
+      label: "Shirts",
+      hasChildren: false,
+      parentId: "mens",
+      expanded: false,
+    },
+    {
+      id: "trousers",
+      label: "Trousers",
+      hasChildren: false,
+      parentId: "mens",
+      expanded: false,
+    },
+    {
+      id: "tshirts",
+      label: "T-Shirts",
+      hasChildren: false,
+      parentId: "mens",
+      expanded: false,
+    },
+  ],
+  womens: [
+    {
+      id: "tops",
+      label: "Tops",
+      hasChildren: false,
+      parentId: "womens",
+      expanded: false,
+    },
+    {
+      id: "skirts",
+      label: "Skirts",
+      hasChildren: false,
+      parentId: "womens",
+      expanded: false,
+    },
+    {
+      id: "traditional",
+      label: "Traditional",
+      hasChildren: false,
+      parentId: "womens",
+      expanded: false,
+    },
+  ],
+  furniture: [
+    {
+      id: "table",
+      label: "Table",
+      hasChildren: false,
+      parentId: "furniture",
+      expanded: false,
+    },
+    {
+      id: "chair",
+      label: "Chair",
+      hasChildren: true,
+      parentId: "furniture",
+      expanded: false,
+    },
+    {
+      id: "sofa",
+      label: "Sofa",
+      hasChildren: false,
+      parentId: "furniture",
+      expanded: false,
+    },
+  ],
+  chair: [
+    {
+      id: "dining-chair",
+      label: "Dining Chair",
+      hasChildren: false,
+      parentId: "chair",
+      expanded: false,
+    },
+    {
+      id: "office-chair",
+      label: "Office Chair",
+      hasChildren: false,
+      parentId: "chair",
+      expanded: false,
+    },
+    {
+      id: "gaming-chair",
+      label: "Gaming Chair",
+      hasChildren: false,
+      parentId: "chair",
+      expanded: false,
+    },
+  ],
+  fitness: [
+    {
+      id: "sports",
+      label: "Sports",
+      hasChildren: true,
+      parentId: "fitness",
+      expanded: false,
+    },
+    {
+      id: "gym",
+      label: "Gym",
+      hasChildren: true,
+      parentId: "fitness",
+      expanded: false,
+    },
+  ],
+  sports: [
+    {
+      id: "football",
+      label: "Football",
+      hasChildren: false,
+      parentId: "sports",
+      expanded: false,
+    },
+    {
+      id: "cricket",
+      label: "Cricket",
+      hasChildren: false,
+      parentId: "sports",
+      expanded: false,
+    },
+    {
+      id: "basketball",
+      label: "Basketball",
+      hasChildren: false,
+      parentId: "sports",
+      expanded: false,
+    },
+  ],
+  gym: [
+    {
+      id: "treadmill",
+      label: "Treadmill",
+      hasChildren: false,
+      parentId: "gym",
+      expanded: false,
+    },
+    {
+      id: "dumbbells",
+      label: "Dumbbells",
+      hasChildren: false,
+      parentId: "gym",
+      expanded: false,
+    },
+  ],
+};
+
