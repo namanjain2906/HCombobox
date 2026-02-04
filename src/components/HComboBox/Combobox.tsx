@@ -320,18 +320,20 @@ const ComboBox = () => {
 
           {/* Checkbox */}
           <input
+            id={`checkbox-${node.id}`}
             type="checkbox"
             checked={shouldShowAsChecked}
             onChange={(e) =>
               toggleCheckbox(node.id, e.target.checked, node.hasChildren)
             }
+            aria-label={node.label}
           />
 
-          {/* Label */}
-          <label className="cursor-pointer">{node.label}</label>
+
+          <label htmlFor={`checkbox-${node.id}`} className="cursor-pointer">{node.label}</label>
         </div>
 
-        {/* Children (if expanded) */}
+
         {isOpen && children.length > 0 && (
           <div>
             {children.map((child) => renderTreeNode(child, indentLevel + 1))}
@@ -375,6 +377,7 @@ const ComboBox = () => {
 
                   {/* Checkbox */}
                   <input
+                    id={`checkbox-${node.id}`}
                     type="checkbox"
                     checked={
                       node.hasChildren
@@ -389,10 +392,12 @@ const ComboBox = () => {
                       )
                     }
                     disabled={!isLastInPath}
+                    aria-label={node.label}
                   />
 
                   {/* Label */}
                   <label
+                    htmlFor={`checkbox-${node.id}`}
                     className={`cursor-pointer ${isLastInPath ? "font-semibold" : ""}`}
                   >
                     {node.label}
@@ -408,7 +413,7 @@ const ComboBox = () => {
 
   return (
     <div
-      className="p-7 border-2 border-[#A3C6E5] focus:outline-none rounded-2xl"
+      className="p-8 border-2 border-[#A3C6E5] focus:outline-none rounded-2xl"
       onKeyDown={handleKeyDown}
       tabIndex={0}
     >
