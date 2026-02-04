@@ -408,7 +408,7 @@ const ComboBox = () => {
 
   return (
     <div
-      className="p-8 border-2 border-[#A3C6E5] focus:outline-none rounded-2xl"
+      className="p-7 border-2 border-[#A3C6E5] focus:outline-none rounded-2xl"
       onKeyDown={handleKeyDown}
       tabIndex={0}
     >
